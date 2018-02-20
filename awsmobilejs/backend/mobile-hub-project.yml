@@ -1,0 +1,61 @@
+--- !com.amazonaws.mobilehub.v0.Project 
+features:
+  cloudlogic: !com.amazonaws.mobilehub.v0.CloudLogic 
+    components:
+      subscribersCRUD: !com.amazonaws.mobilehub.v0.API 
+        attributes:
+          name: subscribersCRUD
+          requires-signin: false
+          sdk-generation-stage-name: Development
+        paths:
+          /subscribers: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/subscribers-20180217180732.zip
+            description: 'Handler for calls to resource path : /subscribers/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: ptMyRGPInfJPA6F1zhX6gKH8QE6DG2VJiZwWIybeN2Q=
+            memorySize: '128'
+            modified: '2018-02-17T17:08:03.908+0000'
+            name: subscribers
+            runtime: nodejs6.10
+            timeout: '3'
+            version: QwMkqBTA18jLtcwsvuf8JOGC9__aVqKp
+          '/subscribers/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/subscribers-20180217180732.zip
+            description: 'Handler for calls to resource path : /subscribers/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: ptMyRGPInfJPA6F1zhX6gKH8QE6DG2VJiZwWIybeN2Q=
+            memorySize: '128'
+            modified: '2018-02-17T17:08:03.908+0000'
+            name: subscribers
+            runtime: nodejs6.10
+            timeout: '3'
+            version: vN6b9FMUC4qu5Zadkw.H9zzIu7q1VyuH
+  content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
+    attributes:
+      enabled: true
+      visibility: public-global
+    components:
+      release: !com.amazonaws.mobilehub.v0.Bucket {}
+  database: !com.amazonaws.mobilehub.v0.Database 
+    components:
+      database-nosql: !com.amazonaws.mobilehub.v0.NoSQLDatabase 
+        tables:
+          - !com.amazonaws.mobilehub.v0.NoSQLTable 
+            attributes:
+              userId: S
+            hashKeyName: userId
+            hashKeyType: S
+            rangeKeyName: ''
+            rangeKeyType: ''
+            tableName: ___DYNAMIC_PREFIX___-subscribers
+            tablePrivacy: private
+  mobile-analytics: !com.amazonaws.mobilehub.v0.Pinpoint 
+    components:
+      analytics: !com.amazonaws.mobilehub.v0.PinpointAnalytics {}
+  sign-in: !com.amazonaws.mobilehub.v0.SignIn {}
+name: subscribe-form-2018-02-17-16-12-50
+region: us-east-1
