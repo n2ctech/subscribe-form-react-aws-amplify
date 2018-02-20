@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+Source code for [Build your own mail subscription form & mailing list with AWS Mobile Hub and React](https://medium.com/@antoniosito/build-your-own-mail-subscription-form-mailing-list-with-aws-mobile-hub-and-react-d45e14152434).
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
